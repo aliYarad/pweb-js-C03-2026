@@ -20,7 +20,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
  
   function saveCart(cart) {
-    localStorage.setItem("cart", JSON.stringify(cart));
+    if (cart.length === 0) {
+      localStorage.removeItem("cart");
+    } else {
+      localStorage.setItem("cart", JSON.stringify(cart));
+    }
     renderCartBadge();
   }
  
@@ -82,7 +86,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
  
   function saveWishlist(list) {
-    localStorage.setItem("wishlist", JSON.stringify(list));
+    if (list.length === 0) {
+      localStorage.removeItem("wishlist");
+    } else {
+      localStorage.setItem("wishlist", JSON.stringify(list));
+    }
     renderWishlistBadge();
   }
  
