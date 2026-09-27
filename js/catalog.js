@@ -117,10 +117,10 @@ function renderProducts() {
                 ${priceHtml}
                 <p style="color: #f59e0b; font-size: 14px; margin: 0 0 12px 0;">★ ${product.rating}</p>
             </div>
-            <button class="btn-add-cart" data-id="${product.id}" style="padding: 6px 12px; background: #4f46e5; color: #fff; border: none; border-radius: 4px; cursor: pointer;">+ Keranjang</button>
+            <button class="btn-add-cart" data-id="${product.id}">+ Keranjang</button>
         `;
         productGrid.appendChild(card);
-    });
+});
 
     renderLoadMoreButton();
 }

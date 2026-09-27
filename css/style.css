@@ -284,30 +284,21 @@ button.btn-submit:disabled {
 }
 
 /* Tombol Tambah ke Keranjang */
-/* Gabungkan selector tombol keranjang di kartu produk DAN di dalam modal */
-.btn-add-cart, 
-.modal-content button, /* Sesuaikan dengan class/tag pembungkus tombol di modalmu */
-.modal button {
-    background-color: #4f46e5;
-    color: #ffffff;
-    border: none;
-    border-radius: 6px;
+/* Pastikan class ini ada di style.css kalian */
+.btn-add-cart {
+    padding: 6px 12px; 
+    background: #4f46e5; 
+    color: #fff; 
+    border: none; 
+    border-radius: 4px; 
     cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-/* Efek Hover (Berubah jadi lebih tua) */
-.btn-add-cart:hover, 
-.modal-content button:hover,
-.modal button:hover {
+.btn-add-cart:hover {
     background-color: #3730a3;
 }
 
-/* Efek Active/Ditekan */
-.btn-add-cart:active, 
-.modal-content button:active,
-.modal button:active {
+.btn-add-cart:active {
     background-color: #312e81;
     transform: scale(0.97);
 }
