@@ -55,9 +55,9 @@ async function fetchProducts() {
 function renderControls() {
     controlsArea.innerHTML = `
         <div class="search-filter-wrapper" style="display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 20px;">
-            <input type="text" id="searchInput" placeholder="Cari produk..." class="form-control" style="flex: 1; min-width: 200px; padding: 8px;" />
+            <input type="text" id="searchInput" placeholder="Cari produk..." class="form-control" style="flex: 1; min-width: 200px; padding: 10px 14px; border: 1px solid #d1d5db; border-radius: 16px;" />
             
-            <select id="categoryFilter" class="form-select" style="padding: 8px;">
+            <select id="categoryFilter" class="form-select" style="padding: 10px 14px; border: 1px solid #d1d5db; border-radius: 16px;">
                 <option value="">Semua Kategori</option>
                 <option value="beauty">Beauty</option>
                 <option value="fragrances">Fragrances</option>
@@ -65,7 +65,7 @@ function renderControls() {
                 <option value="groceries">Groceries</option>
             </select>
             
-            <select id="sortSelect" class="form-select" style="padding: 8px;">
+            <select id="sortSelect" class="form-select" style="padding: 10px 14px; border: 1px solid #d1d5db; border-radius: 16px;">
                 <option value="">Urutkan</option>
                 <option value="price-asc">Harga: Rendah ke Tinggi</option>
                 <option value="price-desc">Harga: Tinggi ke Rendah</option>
