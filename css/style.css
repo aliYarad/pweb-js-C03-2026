@@ -249,7 +249,13 @@ button.btn-submit:disabled {
 .badge { position: absolute; top: -8px; right: -10px; background: var(--error-color); color: white; font-size: 0.7rem; padding: 2px 6px; border-radius: 50%; }
 
 
-
+/* Pastikan class product-grid dari kerangka timmu diatur jadi Grid 3 kolom */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
 /* Styling untuk Kartu Produk */
 .product-card {
     border: 1px solid #e5e7eb;
@@ -278,10 +284,12 @@ button.btn-submit:disabled {
 }
 
 /* Tombol Tambah ke Keranjang */
-.btn-add-cart {
-    padding: 8px 12px;
-    background: #4f46e5;
-    color: #fff;
+/* Gabungkan selector tombol keranjang di kartu produk DAN di dalam modal */
+.btn-add-cart, 
+.modal-content button, /* Sesuaikan dengan class/tag pembungkus tombol di modalmu */
+.modal button {
+    background-color: #4f46e5;
+    color: #ffffff;
     border: none;
     border-radius: 6px;
     cursor: pointer;
@@ -289,12 +297,19 @@ button.btn-submit:disabled {
     transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
-.btn-add-cart:hover {
-    background: #4338ca;
+/* Efek Hover (Berubah jadi lebih tua) */
+.btn-add-cart:hover, 
+.modal-content button:hover,
+.modal button:hover {
+    background-color: #3730a3;
 }
 
-.btn-add-cart:active {
-    transform: scale(0.96);
+/* Efek Active/Ditekan */
+.btn-add-cart:active, 
+.modal-content button:active,
+.modal button:active {
+    background-color: #312e81;
+    transform: scale(0.97);
 }
 
 /* ==== MODAL DETAIL PRODUK ==== */
