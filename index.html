@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk - Mini Shopee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Script diletakkan di head dengan defer -->
+    <script src="js/auth.js" defer></script>     <!-- Person A: Wajib urutan pertama -->
+    <script src="js/catalog.js" defer></script>  <!-- Person B -->
+    <script src="js/cart.js" defer></script>     <!-- Person C -->
+</head>
+<body>
+
+    <!-- NAVBAR (Person A) -->
+    <nav class="navbar">
+        <div class="nav-brand">Mini Shopee</div>
+        <div class="nav-user">
+            <!-- Sapaan Dinamis -->
+            <span id="welcomeMessage">Halo, Guest!</span>
+            
+            <!-- Tombol Dark Mode Global -->
+            <button id="darkModeToggleGlobal" class="btn-icon" style="width: 35px; height: 35px; font-size: 1rem;">🌙</button>
+
+            <!-- Badge Keranjang (Person C) -->
+            <div class="cart-badge-container" id="cartIcon">
+                🛒 <span id="cartBadge" class="badge">0</span>
+            </div>
+            
+            <!-- Tombol Logout -->
+            <button id="logoutBtn" class="btn-logout">Logout</button>
+        </div>
+    </nav>
+
+    <!-- AREA KONTEN (Person B & C) -->
+    <main class="main-content">
+        <section id="controlsArea" class="controls">
+            <!-- Person B: Buat filter & search di JS -->
+        </section>
+
+        <section id="productGrid" class="product-grid">
+            <!-- Person B: Render card produk di sini -->
+            <h3 style="text-align: center; color: var(--text-muted); margin-top: 50px;">
+                Tunggu Person B merender produk di sini...
+            </h3>
+        </section>
+        
+        <div class="load-more-container" id="loadMoreContainer">
+            <!-- Person B: Tambahkan button load more di sini -->
+        </div>
+    </main>
+
+    <div id="productModal" class="modal hidden">
+        <!-- Person C: Render modal detail di sini -->
+    </div>
+
+</body>
+</html>
